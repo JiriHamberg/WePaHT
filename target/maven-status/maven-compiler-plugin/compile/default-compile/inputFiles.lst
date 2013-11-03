@@ -1,0 +1,13 @@
+/home/jiri/NetBeansProjects/s2013-wepa-ht/HT-WepaHT/src/main/java/wad/booklibrary/service/BookService.java
+/home/jiri/NetBeansProjects/s2013-wepa-ht/HT-WepaHT/src/main/java/wad/booklibrary/repository/BookRepository.java
+/home/jiri/NetBeansProjects/s2013-wepa-ht/HT-WepaHT/src/main/java/wad/booklibrary/service/OpenLibraryRemoteBookService.java
+/home/jiri/NetBeansProjects/s2013-wepa-ht/HT-WepaHT/src/main/java/wad/booklibrary/authentication/LibraryAuthenticationProvider.java
+/home/jiri/NetBeansProjects/s2013-wepa-ht/HT-WepaHT/src/main/java/wad/booklibrary/domain/Book.java
+/home/jiri/NetBeansProjects/s2013-wepa-ht/HT-WepaHT/src/main/java/wad/booklibrary/service/JPABookService.java
+/home/jiri/NetBeansProjects/s2013-wepa-ht/HT-WepaHT/src/main/java/wad/booklibrary/service/RemoteBookService.java
+/home/jiri/NetBeansProjects/s2013-wepa-ht/HT-WepaHT/src/main/java/wad/booklibrary/controller/BookController.java
+/home/jiri/NetBeansProjects/s2013-wepa-ht/HT-WepaHT/src/main/java/wad/booklibrary/authentication/UserRepository.java
+/home/jiri/NetBeansProjects/s2013-wepa-ht/HT-WepaHT/src/main/java/wad/booklibrary/domain/SearchType.java
+/home/jiri/NetBeansProjects/s2013-wepa-ht/HT-WepaHT/src/main/java/wad/booklibrary/domain/BookForm.java
+/home/jiri/NetBeansProjects/s2013-wepa-ht/HT-WepaHT/src/main/java/wad/template/controller/DefaultController.java
+/home/jiri/NetBeansProjects/s2013-wepa-ht/HT-WepaHT/src/main/java/wad/booklibrary/authentication/User.java

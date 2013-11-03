@@ -1,0 +1,12 @@
+wad/booklibrary/service/JPABookService.class
+wad/booklibrary/controller/BookController.class
+wad/booklibrary/domain/SearchType.class
+wad/booklibrary/domain/Book.class
+wad/booklibrary/domain/BookForm.class
+wad/booklibrary/authentication/LibraryAuthenticationProvider$1.class
+wad/booklibrary/service/JPABookService$1.class
+wad/template/controller/DefaultController.class
+wad/booklibrary/service/RemoteBookService.class
+wad/booklibrary/service/OpenLibraryRemoteBookService.class
+wad/booklibrary/service/BookService.class
+wad/booklibrary/repository/BookRepository.class

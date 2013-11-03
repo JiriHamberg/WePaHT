@@ -1,0 +1,53 @@
+/* 
+    Document   : book-cover.css
+    Created on : 24.10.2013, 12:20:28
+    Author     : jiri
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.book-cover {
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+    border-bottom-width: thin;
+    border-bottom-style: solid;
+    border-top-width: thin;
+    border-top-style: solid;
+}
+
+.book-info {
+   padding: 10px;
+   border-bottom-width: thin;
+   border-bottom-style: solid;
+   border-top-width: thin;
+   border-top-style: solid;   
+}
+
+
+.book-title {
+   text-align: left; 
+   padding-bottom: 10px;
+   font-weight: bold;
+}
+
+.book-table {
+    border-collapse: collapse;
+}
+
+.message {
+    color: green;
+    
+    animation: fadeout 10s forwards;
+    -webkit-animation: fadeout 10s forwards; /* chrome,  safari */
+}
+
+@keyframes fadeout {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@-webkit-keyframes fadeout {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
