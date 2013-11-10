@@ -22,7 +22,7 @@
         <h1>List of books</h1>
     <table class="book-table">
         <tbody>
-            <c:forEach var="book" items="${books.getContent()}">
+            <c:forEach var="book" items="${books.content}"> <!-- books.getContent() -->
                 <tr>
                     <td class="book-cover">
                         <img src="http://covers.openlibrary.org/b/isbn/${book.ISBN}-S.jpg" /> <br/>
