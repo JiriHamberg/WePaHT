@@ -11,8 +11,8 @@ public final class addview_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   private static java.util.List<String> _jspx_dependants;
 
-  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_form_input_path_nobody;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_form_form_method_commandName_action;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_form_input_path_id_nobody;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_form_form_method_action;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_form_errors_path_nobody;
 
@@ -23,15 +23,15 @@ public final class addview_jsp extends org.apache.jasper.runtime.HttpJspBase
   }
 
   public void _jspInit() {
-    _jspx_tagPool_form_input_path_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_form_form_method_commandName_action = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_form_input_path_id_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_form_form_method_action = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_form_errors_path_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
   public void _jspDestroy() {
-    _jspx_tagPool_form_input_path_nobody.release();
     _jspx_tagPool_form_form_method_commandName_action.release();
+    _jspx_tagPool_form_input_path_id_nobody.release();
     _jspx_tagPool_form_form_method_action.release();
     _jspx_tagPool_form_errors_path_nobody.release();
   }
@@ -362,9 +362,10 @@ public final class addview_jsp extends org.apache.jasper.runtime.HttpJspBase
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  form:input
-    org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_input_0 = (org.springframework.web.servlet.tags.form.InputTag) _jspx_tagPool_form_input_path_nobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
+    org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_input_0 = (org.springframework.web.servlet.tags.form.InputTag) _jspx_tagPool_form_input_path_id_nobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
     _jspx_th_form_input_0.setPageContext(_jspx_page_context);
     _jspx_th_form_input_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_form_2);
+    _jspx_th_form_input_0.setId("title");
     _jspx_th_form_input_0.setPath("title");
     int[] _jspx_push_body_count_form_input_0 = new int[] { 0 };
     try {
@@ -378,7 +379,7 @@ public final class addview_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_th_form_input_0.doCatch(_jspx_exception);
     } finally {
       _jspx_th_form_input_0.doFinally();
-      _jspx_tagPool_form_input_path_nobody.reuse(_jspx_th_form_input_0);
+      _jspx_tagPool_form_input_path_id_nobody.reuse(_jspx_th_form_input_0);
     }
     return false;
   }
@@ -388,9 +389,10 @@ public final class addview_jsp extends org.apache.jasper.runtime.HttpJspBase
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  form:input
-    org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_input_1 = (org.springframework.web.servlet.tags.form.InputTag) _jspx_tagPool_form_input_path_nobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
+    org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_input_1 = (org.springframework.web.servlet.tags.form.InputTag) _jspx_tagPool_form_input_path_id_nobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
     _jspx_th_form_input_1.setPageContext(_jspx_page_context);
     _jspx_th_form_input_1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_form_2);
+    _jspx_th_form_input_1.setId("isbn");
     _jspx_th_form_input_1.setPath("ISBN");
     int[] _jspx_push_body_count_form_input_1 = new int[] { 0 };
     try {
@@ -404,7 +406,7 @@ public final class addview_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_th_form_input_1.doCatch(_jspx_exception);
     } finally {
       _jspx_th_form_input_1.doFinally();
-      _jspx_tagPool_form_input_path_nobody.reuse(_jspx_th_form_input_1);
+      _jspx_tagPool_form_input_path_id_nobody.reuse(_jspx_th_form_input_1);
     }
     return false;
   }
@@ -414,9 +416,10 @@ public final class addview_jsp extends org.apache.jasper.runtime.HttpJspBase
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  form:input
-    org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_input_2 = (org.springframework.web.servlet.tags.form.InputTag) _jspx_tagPool_form_input_path_nobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
+    org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_input_2 = (org.springframework.web.servlet.tags.form.InputTag) _jspx_tagPool_form_input_path_id_nobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
     _jspx_th_form_input_2.setPageContext(_jspx_page_context);
     _jspx_th_form_input_2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_form_2);
+    _jspx_th_form_input_2.setId("authors");
     _jspx_th_form_input_2.setPath("authors");
     int[] _jspx_push_body_count_form_input_2 = new int[] { 0 };
     try {
@@ -430,7 +433,7 @@ public final class addview_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_th_form_input_2.doCatch(_jspx_exception);
     } finally {
       _jspx_th_form_input_2.doFinally();
-      _jspx_tagPool_form_input_path_nobody.reuse(_jspx_th_form_input_2);
+      _jspx_tagPool_form_input_path_id_nobody.reuse(_jspx_th_form_input_2);
     }
     return false;
   }
@@ -440,9 +443,10 @@ public final class addview_jsp extends org.apache.jasper.runtime.HttpJspBase
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  form:input
-    org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_input_3 = (org.springframework.web.servlet.tags.form.InputTag) _jspx_tagPool_form_input_path_nobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
+    org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_input_3 = (org.springframework.web.servlet.tags.form.InputTag) _jspx_tagPool_form_input_path_id_nobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
     _jspx_th_form_input_3.setPageContext(_jspx_page_context);
     _jspx_th_form_input_3.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_form_2);
+    _jspx_th_form_input_3.setId("publishers");
     _jspx_th_form_input_3.setPath("publishers");
     int[] _jspx_push_body_count_form_input_3 = new int[] { 0 };
     try {
@@ -456,7 +460,7 @@ public final class addview_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_th_form_input_3.doCatch(_jspx_exception);
     } finally {
       _jspx_th_form_input_3.doFinally();
-      _jspx_tagPool_form_input_path_nobody.reuse(_jspx_th_form_input_3);
+      _jspx_tagPool_form_input_path_id_nobody.reuse(_jspx_th_form_input_3);
     }
     return false;
   }
@@ -466,9 +470,10 @@ public final class addview_jsp extends org.apache.jasper.runtime.HttpJspBase
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  form:input
-    org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_input_4 = (org.springframework.web.servlet.tags.form.InputTag) _jspx_tagPool_form_input_path_nobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
+    org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_input_4 = (org.springframework.web.servlet.tags.form.InputTag) _jspx_tagPool_form_input_path_id_nobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
     _jspx_th_form_input_4.setPageContext(_jspx_page_context);
     _jspx_th_form_input_4.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_form_2);
+    _jspx_th_form_input_4.setId("publishingYear");
     _jspx_th_form_input_4.setPath("publishingYear");
     int[] _jspx_push_body_count_form_input_4 = new int[] { 0 };
     try {
@@ -482,7 +487,7 @@ public final class addview_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_th_form_input_4.doCatch(_jspx_exception);
     } finally {
       _jspx_th_form_input_4.doFinally();
-      _jspx_tagPool_form_input_path_nobody.reuse(_jspx_th_form_input_4);
+      _jspx_tagPool_form_input_path_id_nobody.reuse(_jspx_th_form_input_4);
     }
     return false;
   }
@@ -492,9 +497,10 @@ public final class addview_jsp extends org.apache.jasper.runtime.HttpJspBase
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  form:input
-    org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_input_5 = (org.springframework.web.servlet.tags.form.InputTag) _jspx_tagPool_form_input_path_nobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
+    org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_input_5 = (org.springframework.web.servlet.tags.form.InputTag) _jspx_tagPool_form_input_path_id_nobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
     _jspx_th_form_input_5.setPageContext(_jspx_page_context);
     _jspx_th_form_input_5.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_form_2);
+    _jspx_th_form_input_5.setId("description");
     _jspx_th_form_input_5.setPath("description");
     int[] _jspx_push_body_count_form_input_5 = new int[] { 0 };
     try {
@@ -508,7 +514,7 @@ public final class addview_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_th_form_input_5.doCatch(_jspx_exception);
     } finally {
       _jspx_th_form_input_5.doFinally();
-      _jspx_tagPool_form_input_path_nobody.reuse(_jspx_th_form_input_5);
+      _jspx_tagPool_form_input_path_id_nobody.reuse(_jspx_th_form_input_5);
     }
     return false;
   }

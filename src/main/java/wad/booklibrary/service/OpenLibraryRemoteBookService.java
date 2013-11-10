@@ -166,8 +166,12 @@ public class OpenLibraryRemoteBookService implements RemoteBookService {
         private List<String> getPublishers(JsonObject data) {
             try{
                 List<String> res = new ArrayList<String>();
+                //for some reason first document entries seem to list freakishly many publishers
                 for (JsonElement publisherName : data.get("publisher").getAsJsonArray()) {
                     res.add(publisherName.getAsString());
+                }
+                if(res.size() > 3){
+                    res = res.subList(0, 2);
                 }
                 return res;
             } catch(NullPointerException e) {

@@ -32,11 +32,11 @@ public interface BookRepository extends JpaRepository<Book, Long> {
     Long countByDescriptionContainingIgnoreCase(String title);    
     
     Page<Book> findDistinctByAuthorsContainingIgnoreCase(String author, Pageable pageable);
-    //NOT WORKING CORRECTLY!!! todo: write a query
+
     Long countDistinctByAuthorsContainingIgnoreCase(String author);
     
     Page<Book> findDistinctByPublishersContainingIgnoreCase(String author, Pageable pageable);
-    //NOT WORKING CORRECTLY!!! todo: write a query
+
     Long countDistinctByPublishersContainingIgnoreCase(String author);
     
 }

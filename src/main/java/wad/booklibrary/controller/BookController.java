@@ -6,6 +6,7 @@ package wad.booklibrary.controller;
 
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import wad.booklibrary.domain.Book;
 import wad.booklibrary.domain.BookForm;
@@ -70,6 +72,7 @@ public class BookController {
         return "list";
     }
     
+    @PreAuthorize("hasRole('user')")
     @RequestMapping(value = "books/{id}", method = RequestMethod.GET)
     public String getEditView(
             @ModelAttribute("bookForm") BookForm bookForm,
@@ -78,7 +81,11 @@ public class BookController {
         
         model.addAttribute("bookId", bookId);
         model.addAttribute("submitText", "Update");
-        bookForm.populate(bookService.getBook(bookId));
+        Book b = bookService.getBook(bookId);
+        if(b == null){
+            throw new ResourceNotFoundException();
+        }
+        bookForm.populate(b);
         return "bookedit";
     }
     
@@ -90,6 +97,7 @@ public class BookController {
         return "bookview";
     }
     
+    @PreAuthorize("hasRole('user')")
     @RequestMapping(value= "books", method = RequestMethod.POST)
     public String addBook(
             @Valid @ModelAttribute("bookForm") BookForm bookForm,
@@ -106,11 +114,13 @@ public class BookController {
         return "redirect:/app/view/{id}";
     }   
     
+    @PreAuthorize("hasRole('user')")
     @RequestMapping(value = "add", method = RequestMethod.GET)
     public String getAddView(@ModelAttribute("bookForm") BookForm bookForm){
         return "addview";
     } 
-       
+    
+    @PreAuthorize("hasRole('user')")
     @RequestMapping(value = "books/{id}", method = RequestMethod.PUT)
     public String updateBook(
             @Valid @ModelAttribute("bookForm") BookForm bookForm,
@@ -141,6 +151,7 @@ public class BookController {
         return "redirect:/app/books";
     }
     
+    @PreAuthorize("hasRole('user')")
     @RequestMapping(value = "remote/get/isbn", method = RequestMethod.GET)
     public String getRemoteBookByISBN(
             @RequestParam("isbn") String ISBN,
@@ -156,6 +167,7 @@ public class BookController {
         return "addview";
     }
     
+    @PreAuthorize("hasRole('user')")
     @RequestMapping(value = "remote/get/title", method = RequestMethod.GET)
     public String getRemoteBookByTitle(
             @RequestParam("title") String title,
@@ -171,5 +183,7 @@ public class BookController {
         return "addview";
     }
     
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    private final class ResourceNotFoundException extends RuntimeException {}
     
 }

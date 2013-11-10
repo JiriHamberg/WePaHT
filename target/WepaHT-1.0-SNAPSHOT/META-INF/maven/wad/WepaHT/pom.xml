@@ -13,7 +13,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <netbeans.hint.deploy.server>Tomcat</netbeans.hint.deploy.server>
-        <jetty.port>8090</jetty.port>
     </properties>
 
     <dependencies>
@@ -265,13 +264,13 @@
                     <systemProperties>
                         <systemProperty>
                             <name>jetty.port</name>
-                            <value>${jetty.port}</value>
+                            <value>8090</value>
                         </systemProperty>
                     </systemProperties>
                     
                     <connectors>
                         <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
-                            <port>${jetty.port}</port>
+                            <port>8090</port>
                         </connector>
                     </connectors>
                 </configuration>

@@ -124,7 +124,7 @@ public final class bookedit_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_eval_form_form_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\n");
-          out.write("                            <input type=\"submit\" value=\"Delete\"/>\n");
+          out.write("                            <input id=\"deleteInput\" type=\"submit\" value=\"Delete\"/>\n");
           out.write("                        ");
           int evalDoAfterBody = _jspx_th_form_form_0.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)

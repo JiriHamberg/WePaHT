@@ -72,18 +72,21 @@ public final class menubar_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("<div class=\"menu-bar\">\n");
       out.write("    <div><a href=\"/app/books\">Books</a></div>\n");
-      out.write("    <div><a href=\"/app/add\">Add</a></div>\n");
-      out.write("\n");
-      out.write("    ");
-      out.write("\n");
       out.write("    ");
       if (_jspx_meth_sec_authorize_0(_jspx_page_context))
         return;
+      out.write("\n");
       out.write("\n");
       out.write("    ");
       out.write("\n");
       out.write("    ");
       if (_jspx_meth_sec_authorize_1(_jspx_page_context))
+        return;
+      out.write("\n");
+      out.write("    ");
+      out.write("\n");
+      out.write("    ");
+      if (_jspx_meth_sec_authorize_2(_jspx_page_context))
         return;
       out.write("    \n");
       out.write("    \n");
@@ -121,11 +124,11 @@ public final class menubar_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.springframework.security.taglibs.authz.JspAuthorizeTag _jspx_th_sec_authorize_0 = (org.springframework.security.taglibs.authz.JspAuthorizeTag) _jspx_tagPool_sec_authorize_access.get(org.springframework.security.taglibs.authz.JspAuthorizeTag.class);
     _jspx_th_sec_authorize_0.setPageContext(_jspx_page_context);
     _jspx_th_sec_authorize_0.setParent(null);
-    _jspx_th_sec_authorize_0.setAccess("!hasRole('user')");
+    _jspx_th_sec_authorize_0.setAccess("hasRole('user')");
     int _jspx_eval_sec_authorize_0 = _jspx_th_sec_authorize_0.doStartTag();
     if (_jspx_eval_sec_authorize_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       out.write("\n");
-      out.write("        <div><a href=\"/spring_security_login\">Login</a></div>\n");
+      out.write("        <div><a href=\"/app/add\">Add</a></div>\n");
       out.write("    ");
     }
     if (_jspx_th_sec_authorize_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -144,11 +147,11 @@ public final class menubar_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.springframework.security.taglibs.authz.JspAuthorizeTag _jspx_th_sec_authorize_1 = (org.springframework.security.taglibs.authz.JspAuthorizeTag) _jspx_tagPool_sec_authorize_access.get(org.springframework.security.taglibs.authz.JspAuthorizeTag.class);
     _jspx_th_sec_authorize_1.setPageContext(_jspx_page_context);
     _jspx_th_sec_authorize_1.setParent(null);
-    _jspx_th_sec_authorize_1.setAccess("hasRole('user')");
+    _jspx_th_sec_authorize_1.setAccess("!hasRole('user')");
     int _jspx_eval_sec_authorize_1 = _jspx_th_sec_authorize_1.doStartTag();
     if (_jspx_eval_sec_authorize_1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       out.write("\n");
-      out.write("        <div><a href=\"/j_spring_security_logout\">Logout</a></div>\n");
+      out.write("        <div><a href=\"/spring_security_login\">Login</a></div>\n");
       out.write("    ");
     }
     if (_jspx_th_sec_authorize_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
@@ -156,6 +159,29 @@ public final class menubar_jsp extends org.apache.jasper.runtime.HttpJspBase
       return true;
     }
     _jspx_tagPool_sec_authorize_access.reuse(_jspx_th_sec_authorize_1);
+    return false;
+  }
+
+  private boolean _jspx_meth_sec_authorize_2(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  sec:authorize
+    org.springframework.security.taglibs.authz.JspAuthorizeTag _jspx_th_sec_authorize_2 = (org.springframework.security.taglibs.authz.JspAuthorizeTag) _jspx_tagPool_sec_authorize_access.get(org.springframework.security.taglibs.authz.JspAuthorizeTag.class);
+    _jspx_th_sec_authorize_2.setPageContext(_jspx_page_context);
+    _jspx_th_sec_authorize_2.setParent(null);
+    _jspx_th_sec_authorize_2.setAccess("hasRole('user')");
+    int _jspx_eval_sec_authorize_2 = _jspx_th_sec_authorize_2.doStartTag();
+    if (_jspx_eval_sec_authorize_2 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      out.write("\n");
+      out.write("        <div><a href=\"/j_spring_security_logout\">Logout</a></div>\n");
+      out.write("    ");
+    }
+    if (_jspx_th_sec_authorize_2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_sec_authorize_access.reuse(_jspx_th_sec_authorize_2);
+      return true;
+    }
+    _jspx_tagPool_sec_authorize_access.reuse(_jspx_th_sec_authorize_2);
     return false;
   }
 
@@ -180,7 +206,7 @@ public final class menubar_jsp extends org.apache.jasper.runtime.HttpJspBase
         do {
           out.write("\n");
           out.write("            Search by: \n");
-          out.write("            <select name=\"searchType\">\n");
+          out.write("            <select id=\"searchType\" name=\"searchType\">\n");
           out.write("                ");
           out.write("\n");
           out.write("                ");
@@ -227,7 +253,7 @@ public final class menubar_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("\n");
           out.write("\n");
           out.write("            </select>\n");
-          out.write("            <input type=\"text\" name=\"searchArg\" value=\"");
+          out.write("            <input id=\"searchInput\" type=\"text\" name=\"searchArg\" value=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${searchArg}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("\"/>\n");
           out.write("            <input type=\"submit\" value=\"Search\"/>\n");
